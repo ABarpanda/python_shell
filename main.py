@@ -23,7 +23,7 @@ def sync_readline_history():
     for cmd in HISTORY:
         readline.add_history(cmd)
 
-def echo(text: str, top_level:bool=True):
+def format(text: str, top_level:bool=True):
     if '\"' in text:
         final = ""
         arguments = re.split(r'\s+(?=(?:[^"]*"[^"]*")*[^"]*$)', text)
@@ -34,7 +34,7 @@ def echo(text: str, top_level:bool=True):
                 arg = arg[1:-1]
             if len(arguments) == 1:
                 return arg
-            final += echo(arg, top_level=False) + " "
+            final += format(arg, top_level=False) + " "
         return final.strip()
     elif "'" in text:
         final = ""
@@ -46,7 +46,7 @@ def echo(text: str, top_level:bool=True):
                 arg = arg[1:-1]
             if len(arguments) == 1:
                 return arg
-            final += echo(arg, top_level=False) + " "
+            final += format(arg, top_level=False) + " "
         return final.strip()
     else:
         if top_level:
@@ -68,13 +68,13 @@ def main():
         sys.exit()
     elif command.startswith("echo "):
         text = command[5:]
-        print(echo(text))
+        print(format(text))
     elif command.startswith("pwd"):
         print(os.getcwd())
     elif command.startswith("cd"):
         try:
             if command[3:]=="~":
-                home = os.getenv("HOME")
+                home = os.getenv("USERPROFILE")
                 os.chdir(home)
             else:
                 os.chdir(command[3:])

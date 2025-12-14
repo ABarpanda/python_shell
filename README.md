@@ -36,6 +36,7 @@ PyShell is a lightweight, interactive shell clone written in **Python**, designe
 ### Run the Shell
 
 ```bash
+pip install -r requirements.txt
 python main.py
 ```
 
