@@ -38,7 +38,7 @@ PyShell is a lightweight, interactive shell clone written in **Python**, designe
 
 ### Prerequisites
 
-- Python **3.8+**
+- Python **3.14+**
 
 ### Run the Shell
 
@@ -90,8 +90,8 @@ $ exit
 
 ## 📂 Project Structure
 
-.
-├── main.py        # Main shell loop
+. <br>
+├── main.py <br>
 └── README.md
 
 ## 🎯 Goals of the Project
