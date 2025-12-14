@@ -1,3 +1,10 @@
+
+
+
+https://github.com/user-attachments/assets/d9e50c80-2055-4196-ab2d-847d5a1929d3
+
+
+
 # 🐚 PyShell — A Minimal Shell Clone in Python
 
 PyShell is a lightweight, interactive shell clone written in **Python**, designed to mimic the behavior of a basic Unix shell. It implements a set of commonly used shell builtins and supports interactive command navigation and quoting/escaping.
